@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Consent</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .cookie-btn {
+            flex: 1;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #decline-btn {
+            background-color: #F44336;
+        }
+    </style>
+</head>
+<body>
+
+<div id="cookie-consent">
+    This website uses cookies to ensure you get the best experience on our website.
+    <button class="cookie-btn" onclick="acceptCookies()">Accept All</button>
+    <button id="decline-btn" class="cookie-btn" onclick="declineCookies()">Decline All</button>
+</div>
+
+<!-- Your website content goes here -->
+
+<script>
+    function acceptCookies() {
+        // You can set a cookie or perform other actions when the user accepts
+        // For simplicity, we'll just hide the cookie consent message in this example
+        document.getElementById("cookie-consent").style.display = "none";
+    }
+
+    function declineCookies() {
+        // You can handle declining cookies, e.g., by informing the user or redirecting
+        // For simplicity, we'll just hide the cookie consent message in this example
+        document.getElementById("cookie-consent").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

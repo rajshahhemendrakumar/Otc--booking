@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book a ticket</title>
+	<LINK REL="STYLESHEET" HREF="STYLE.CSS">
+	<style type="text/css">
+		#booktkt	{
+			margin:auto;
+			margin-top: 230px;
+			width: 50%;
+			height: 150px;
+			padding: auto;
+			padding-top: 50px;
+			padding-left: 50px;
+			background-color: rgba(0,0,0,0.3);
+			border-radius: 25px;
+		}
+		html { 
+		  background: url(img/bg7.jpg) no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+		#journeytext	{
+			color: white;
+			font-size: 65px;
+			font-family:"Comic Sans MS", cursive, sans-serif;
+		}
+		#trains	{
+			margin-left: 5s0px;
+			font-size: 25px;
+			margin-top:11px;
+		}
+		#submit	{
+			margin-left: 480px;
+			margin-bottom: 40px;
+			margin-top: none;
+			font-size: 30px;
+		}
+		#birthday {
+          	margin-left: 610px;
+			margin-bottom: 40px;
+			margin-top: 50px;
+			font-size: 30px;
+               }	
+		</style>
+	<script type="text/javascript">
+		function validate()	{
+			var trains=document.getElementById("trains");
+			if(trains.selectedIndex==0)
+			{
+				alert("Please select your train");
+				trains.focus();
+				return false;		
+			}
+		}
+	</script>
+</head>
+<body>
+	
+	<div id="booktkt">
+	<h1 align="center" id="journeytext">Choose your journey</h1><br/><br/>
+	<form method="post" name="journeyform" onsubmit="return validate()">
+		<center>
+		<select id="trains" name="trains" required >
+
+			
+			<option selected disabled>from</option>
+			<option value="rajdhani" ><h2>Rajdhani Express - Mumbai Central to Delhi</h2></option>
+			<option value="duronto" ><h2>Duronto Express - Mumbai Central to Ernakulum</h2></option>
+			<option value="geetanjali"><h2>Geetanjali Express - CST to Kolkata</h2></option>
+			<option value="garibrath" ><h2>Garib Rath - Udaipur to Jammu Tawi</h2></option>
+			<option value="mysoreexp" ><h2>Mysore Express - Talguppa to Mysore Jn</h2></option>
+			
+		</select>
+		
+		</center>
+		<br>
+
+
+		<center>
+			<select id="trains" name="trains" required >
+				
+				
+		<option selected disabled>To</option>
+				<option value="rajdhani" ><h2>Rajdhani Express - Mumbai Central to Delhi</h2></option>
+				<option value="duronto" ><h2>Duronto Express - Mumbai Central to Ernakulum</h2></option>
+				<option value="geetanjali"><h2>Geetanjali Express - CST to Kolkata</h2></option>
+				<option value="garibrath" ><h2>Garib Rath - Udaipur to Jammu Tawi</h2></option>
+				<option value="mysoreexp" ><h2>Mysore Express - Talguppa to Mysore Jn</h2></option>
+				
+			</select>
+			</center>
+			<input type="date" id="birthday" >	
+
+	   <button  onclick = "window.location.href='register.html'" id="submit">Enter</button>
+		
+	</form>
+	</div>
+	</body>
+	</html>
